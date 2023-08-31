@@ -48,8 +48,9 @@ def main(config):
         dtm_data = np.load(config['dtm_path'], mmap_mode='r')
     else:
         logger.info('Creating DTMs...')
-        dtm_data = np.zeros_like(label_data)
-        for i, label in enumerate(label_data):
+        # CoNIC labels have both instance (0) and class labels (1)
+        dtm_data = np.zeros_like(label_data[:,:,:,:1])
+        for i, label in enumerate(label_data[:,:,:,:1]):
             dtm = compute_hybrid_dtm(label)
             dtm_data[i] = dtm
         logger.info('Finished creating DTMs.')
