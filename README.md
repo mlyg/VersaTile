@@ -34,7 +34,8 @@ VersaTile is designed for:
 This repository contains the code necessary to train and run inference using VersaTile. Tutorial notebooks will be developed to guide new users on how to use and modify VersaTile.
 
 Important points to note:
-1. Segmentation models are from https://github.com/qubvel/segmentation_models.pytorch. The source code requires minor editing to add a second output to the models for the distance transform map. The modified code is available in 'smp_edited'. 
+1. Segmentation models are from https://github.com/qubvel/segmentation_models.pytorch. The source code requires minor editing to add a second output to the models for the distance transform map. The modified code is available in 'smp_edited'.
+2. The code was developed to work for the CoNIC challange data. This data stores all images in a large numpy array (rather than in a folder with separate images). If you want to use a custom dataset, then a new PyTorch Dataset class will need to be created. We plan to add more flexibility with custom datasets in the future.
 
 ## Training using VersaTile
 
