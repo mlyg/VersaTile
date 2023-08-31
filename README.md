@@ -23,6 +23,8 @@ VersaTile can be divided into three steps:
 2. **Vector field integration**: pixels within an object move towards the object skeleton. The result is that the distance between pixels belonging to the same object is minimised and the distance between pixels belonging to different objects is maximised. 
 3. **Clustering**: pixels that cluster together after vector field integration are grouped together and labeled as a distinct object.
 
+![Overview of loss function inheritance](https://github.com/mlyg/VersaTile/blob/main/figures/overview.png)
+
 **4. Who is VersaTile designed for?** \
 VersaTile is designed for:
 1. **Users**: people who want to use VersaTile to segment their own data.
@@ -30,6 +32,9 @@ VersaTile is designed for:
 
 **5. How can I use VersaTile?** \
 This repository contains the code necessary to train and run inference using VersaTile. Tutorial notebooks will be developed to guide new users on how to use and modify VersaTile.
+
+Important points to note:
+1. Segmentation models are from https://github.com/qubvel/segmentation_models.pytorch. The source code requires minor editing to add a second output to the models for the distance transform map. The modified code is available in 'smp_edited'. 
 
 ## Training using VersaTile
 
@@ -65,6 +70,8 @@ VersaTile is built on the work from many excellent researchers who have generous
 2. **Segmentation models**: https://github.com/qubvel/segmentation_models.pytorch
 3. **Gradient map**: https://github.com/vqdang/hover_net
 4. **Bayesian hyperparameter optimisation**: https://github.com/hyperopt/hyperopt
+5. **Metrics**: https://github.com/stardist/stardist
 
 ## License
-Distributed under the Apache-2.0 license. Please be wary of the various licenses associated with the code from the other libraries we have used in the acknowledgements. 
+Distributed under the Apache-2.0 license. \
+Please be wary of the various licenses associated with the code in VersaTile that comes from other libraries.
