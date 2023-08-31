@@ -1,0 +1,19 @@
+# General
+run_name: test
+output_path: '/path/to/output/file'
+image_path: '/path/to/image/file'
+train_test_split: '/path/to/train/test/split'
+
+# Model setup
+model_path: '/path/to/trained/model'
+param_path: '/path/to/vector/field/integration/parameters'
+encoder: mit_b1
+decoder: manet
+
+# image setup
+image_size: 256
+
+# Post-processing
+tta: True
+
+

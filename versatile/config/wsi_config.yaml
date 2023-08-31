@@ -1,0 +1,18 @@
+# General
+output_path: '/path/to/output/file'
+wsi_path: '/path/to/wsi/image'
+
+# Model setup
+model_path: '/path/to/trained/model'
+param_path: '/path/to/vector/field/integration/parameters'
+encoder: mit_b1
+decoder: manet
+
+# Post-processing
+tta: True
+
+# WSI processing
+window_size: 224
+stride: 112
+
+

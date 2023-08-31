@@ -1,0 +1,44 @@
+# General
+run_name: test
+output_path: '/path/to/output'
+image_path: '/path/to/image/file'
+label_path: '/path/to/label/file'
+dtm_path: '/path/to/dtm/file'
+train_test_split: '/path/to/train/test/split'
+seed: True
+
+# Training setup
+batch_size: 4
+learning_rate: 1.0e-4
+weight_decay: 1.0e-3
+max_epoch: 200
+save_img_epoch: 50
+image_size: 256
+
+# Bayesian hyperparameter optimisation
+num_eval: 30
+max_eval: 100
+dx: [0.1, 1]
+n_steps: [10, 100, 1]
+
+# Model setup
+encoder: mit_b1
+decoder: manet
+
+# Preprocessing 
+stain_aug: sca
+sc_loss: True
+stain: he
+param_file: '/path/to/stain/augmentation/parameter/file'
+
+# Loss functions
+sem_loss: dice_ce
+dtm_loss: mse
+gtm_loss: mage
+
+# Pretrained
+pretrained: False
+pretrained_path: None
+
+
+
